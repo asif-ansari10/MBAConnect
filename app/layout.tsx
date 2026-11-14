@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Tracking from "./components/Tracking";
 
 export const metadata: Metadata = {
   title: "MBA Admission Enquiry | Find Your MBA College",
@@ -10,7 +11,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Tracking />
+        {children}
+        </body>
     </html>
   );
 }
